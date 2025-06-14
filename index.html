@@ -24,7 +24,11 @@
         display: none;
       }
     }
-
+      @media(max-width: 500px){
+        #heading{
+          font-size: 40px;
+        }
+      }
     @media (max-width: 900px) {
       body{
         overflow-x: hidden;
@@ -140,7 +144,7 @@
 
   <section class="text-center py-12 px-6 bg-[#CCF0FF] w-full">
 
-  <h1 class="text-6xl leading-tight pt-5 font-bold text-center bg-gradient-to-bl from-[#473E70] to-[#160647] bg-clip-text text-transparent relative inline-block">
+  <h1 id="heading" class="text-6xl leading-tight pt-5 font-bold text-center bg-gradient-to-bl from-[#473E70] to-[#160647] bg-clip-text text-transparent relative inline-block">
   IVF Clinic
   <span class="relative inline-block bg-gradient-to-tr from-[#160647] to-[#473E70] bg-clip-text text-transparent pb-3">
     Management Software
