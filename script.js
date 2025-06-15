@@ -22,19 +22,49 @@ menuBtn.addEventListener('click', () => {
 });
 
 
+
+
+
+// Show Features Menu
 featuresBtn.addEventListener('mouseenter', () => {
-  hoverMenu.style.display = 'flex'; 
+  hoverMenu.style.display = 'flex';
 });
 
- featuresBtn.addEventListener('mouseleave', () => {
+hoverMenu.addEventListener('mouseenter', () => {
+  hoverMenu.style.display = 'flex';
+});
+
+featuresBtn.addEventListener('mouseleave', () => {
+  setTimeout(() => {
+    if (!hoverMenu.matches(':hover')) {
+      hoverMenu.style.display = 'none';
+    }
+  }, 200); // slight delay
+});
+
+hoverMenu.addEventListener('mouseleave', () => {
   hoverMenu.style.display = 'none';
 });
 
 
+// Show Pricing Menu
 pricingBtn.addEventListener('mouseenter', () => {
-  pricingMenu.style.display = 'flex'; 
+  pricingMenu.style.display = 'flex';
+});
+
+pricingMenu.addEventListener('mouseenter', () => {
+  pricingMenu.style.display = 'flex';
 });
 
 pricingBtn.addEventListener('mouseleave', () => {
+  setTimeout(() => {
+    if (!pricingMenu.matches(':hover')) {
+      pricingMenu.style.display = 'none';
+    }
+  }, 200);
+});
+
+pricingMenu.addEventListener('mouseleave', () => {
   pricingMenu.style.display = 'none';
 });
+
